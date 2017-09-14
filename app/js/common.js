@@ -342,8 +342,8 @@ $('.wallet-save').on('click',function(){
     $(this).fadeIn().html('<img src="../img/edit.svg">')
 })
 if($('#wallet_number').val().length > 0){
-    $('.wallet-save').html('<img src="../img/edit.svg">')
+    $('.wallet-save').html('<img src="img/edit.svg">')
 }
 if($('#wallet_number2').val().length > 0){
-    $('.wallet-save2').html('<img src="../img/edit.svg">')
+    $('.wallet-save2').html('<img src="img/edit.svg">')
 }
