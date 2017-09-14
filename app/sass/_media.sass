@@ -1,4 +1,4 @@
-@media (max-width: 1279px)
+@media (max-width: 1160px)
   header
     .menu
       display: none
@@ -198,6 +198,8 @@
           a
             margin-right: 15px
   .lk 
+    h1.title
+        text-align: center !important
     .lk_info
         flex-direction: column
         padding: 20px 0em !important
@@ -206,10 +208,19 @@
             border-right: none
         .col-md-6
             padding: 0 1em !important
-        input
+            &:nth-child(2)
+                margin-top: 3em
+        p
+            text-align: left !important
+    .first
+        p
             width: 100% !important
+        input
+            width: 70% !important
+            float: left
+        .wallet-save
+            margin-top: 20px !important
             
-
   .info
     .item
       padding: 15px

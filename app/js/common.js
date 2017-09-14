@@ -279,27 +279,47 @@ $(document).on('submit', 'form', function (e){
 
         if(email !== undefined && !email.length) {
             $email_field.addClass('error_email');
-             $('.error').fadeIn().html('Пожалуйста введите E-mail')
+            if($('body').hasClass('en')){
+             $('.error').fadeIn().html('Please enter E-mail')   
+            }
+             else{$('.error').fadeIn().html('Пожалуйста введите E-mail')
+                 }
         }
-    if(text !== undefined && !text.length){
+    else if(text !== undefined && !text.length){
             $text_field.addClass('error_email');
-             $('.error').fadeIn().html('Пожалуйста введите имя')
+             if($('body').hasClass('en')){
+                 $('.error').fadeIn().html('Please enter your name')
+             }else{
+                 $('.error').fadeIn().html('Пожалуйста введите имя')
+                  }
             }
-    if(number !== undefined && !number.length){
+    else if(number !== undefined && !number.length){
             $number_field.addClass('error_email');
-             $('.error').fadeIn().html('Пожалуйста введите сумму')
+             if($('body').hasClass('en')){
+                 $('.error').fadeIn().html('Please enter amount')
+            }else{
+               $('.error').fadeIn().html('Пожалуйста введите сумму') 
             }
-     if(password !== undefined && !password.length){
+            }
+     else if(password !== undefined && !password.length){
             $password_field.addClass('error_email');
-             $('.error').fadeIn().html('Пожалуйста введите пароль')
+              if($('body').hasClass('en')){
+                 $('.error').fadeIn().html('Please enter your password')
+             }else{$('.error').fadeIn().html('Пожалуйста введите пароль')
+                  }
             }
     else{
-       $('.login-page, .login-popup, reg-popup').html('<div class="popup__title animated fadeIn" style="margin-bottom: 0;">Данные успешно отправлены</div>') 
+         if($('body').hasClass('en')){
+            $('.login-page, .login-popup, reg-popup').html('<div class="popup__title animated fadeIn" style="margin-bottom: 0;">Data successfuly sent</div>') 
+             }else{
+       $('.login-page, .login-popup, reg-popup').html('<div class="popup__title animated fadeIn" style="margin-bottom: 0;">Данные успешно отправлены</div>')
+             }
     }
     
 })
 
-document.getElementById("wallet_number").value = getSavedValue("wallet_number");    
+document.getElementById("wallet_number2").value = getSavedValue("wallet_number2");
+document.getElementById("wallet_number").value = getSavedValue("wallet_number");
 // set the value to this input
           // set the value to this input
         /* Here you can add more inputs to set value. if it's saved */
@@ -321,3 +341,9 @@ document.getElementById("wallet_number").value = getSavedValue("wallet_number");
 $('.wallet-save').on('click',function(){
     $(this).fadeIn().html('<img src="../img/edit.svg">')
 })
+if($('#wallet_number').val().length > 0){
+    $('.wallet-save').html('<img src="../img/edit.svg">')
+}
+if($('#wallet_number2').val().length > 0){
+    $('.wallet-save2').html('<img src="../img/edit.svg">')
+}

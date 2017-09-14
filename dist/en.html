@@ -16,7 +16,7 @@
     <![endif]-->
     <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
-<body>
+<body class="en">
 <header class="parallax-window" data-parallax="scroll" data-image-src="img/bg-1.jpg">
     <div class="overlay">
         <div class="container-fluid">
@@ -40,13 +40,11 @@
                     </div>
                     <div class="col-md-3 col-sm-4 col-xs-3 col-lg-3 btn-wrap green">
                         <div class="lang">
-                            <a href="#">
-                                <img src="img/gb.png" alt="gb">
-                                <span><img src="img/lang-arrow.svg" alt=""></span>
-                            </a>
+                            <a class="lang-act" href="#"><img src="img/gb.png" alt="russia"><span><img
+                                    src="img/lang-arrow.svg" alt=""></span></a>
                             <ul>
-                                <li><a href="index.html"><img src="img/ru.png" alt="russia"></a></li>
-                                <li><a href="#"><img src="img/cn.png" alt="cn"></a></li>
+                                <li><a href="ru.html"><img src="img/ru.png" alt="russia"></a></li>
+                                <li><a href="#"><img src="img/cn.png" alt="russia"></a></li>
                             </ul>
                         </div>
                         <a href="#login-popup" class="popup-login btn">Profile</a>
@@ -475,18 +473,30 @@
     </div>
 </section>
 <div id="text-popup" class="white-popup mfp-hide">
-    <div class="popup__title">Menu</div>
-    <a href="#first" rel='m_PageScroll2id'>About us</a>
-    <a href="#advantages" rel='m_PageScroll2id'>Advantages</a>
-    <a href="#roadmap" rel='m_PageScroll2id'>Roadmap</a>
-    <a href="#ico" rel='m_PageScroll2id'>ICO details</a>
-    <a href="#team" rel='m_PageScroll2id'>Core members</a>
-    <a href="#media" rel='m_PageScroll2id'>Press</a>
-    <a href="#">Profile</a>
+    <div class="info">
+        <button title="Close (Esc)" type="button" class="mfp-close">×</button>
+        <div class="lang">
+            <a class="lang-act" href="#"><img src="img/ru.png" alt="russia"><span><img src="img/lang-arrow.svg" alt=""></span></a>
+            <ul>
+                <li><a href="#"><img src="img/gb.png" alt="russia"></a></li>
+                <li><a href="#"><img src="img/cn.png" alt="russia"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="menu">
+        <a href="#first" rel='m_PageScroll2id'>About us</a>
+                            <a href="#advantages" rel='m_PageScroll2id'>Advantages</a>
+                            <a href="#roadmap" rel='m_PageScroll2id'>Roadmap</a>
+                            <a href="#ico" rel='m_PageScroll2id'>ICO details</a>
+                            <a href="#team" rel='m_PageScroll2id'>Core members</a>
+                            <a href="#media" rel='m_PageScroll2id'>Press</a>
+        <a class="btn popup-login" href="#login-popup">Profile</a>
+    </div>
 </div>
 <div id="reg-popup" class="reg-popup mfp-hide">
     <button title="Close (Esc)" type="button" class="mfp-close">×</button>
     <div class="popup__title">Please leave your investment request here</div>
+    <div class="popup__subtitle"><div class="error" style="display: none"></div></div>
     <form action="">
         <div class="inputs">
             <input type="text" placeholder="Name">
@@ -501,7 +511,9 @@
     <button title="Close (Esc)" type="button" class="mfp-close">×</button>
     <div class="popup__title">Sign in</div>
     <div class="popup__subtitle">If you don't have an account, <br> <a href="#reg-popup" class="popup-reg">create
-        one</a></div>
+        one</a>
+        <div class="error" style="display: none"></div>
+        </div>
     <form action="">
         <input type="email" placeholder="E-mail">
         <input type="password" placeholder="Password">
@@ -512,7 +524,9 @@
 <div id="reset-popup" class="reset-popup mfp-hide">
     <button title="Close (Esc)" type="button" class="mfp-close">×</button>
     <div class="popup__title">Forgot your password?</div>
-    <div class="popup__subtitle">We'll send password reset instructions.</div>
+    <div class="popup__subtitle">We'll send password reset instructions.
+    <div class="error" style="display: none"></div>
+    </div>
     <form action="">
         <input type="email" placeholder="E-mail">
         <input type="submit" value="Reset Password">
