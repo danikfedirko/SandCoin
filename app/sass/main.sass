@@ -973,6 +973,7 @@ header
             text-align: center
     .first
         padding-top: 1em
+        padding-bottom: 0
         background: none
         p
          width: 50%
@@ -1021,6 +1022,9 @@ header
             display: inline-block
             &::placeholder
                 color:#fff
+            &:focus
+              transition: 0.5s
+              border-bottom: 3px solid #5C5C5C
         .col-md-6
             padding: 0 3em
             
@@ -1037,6 +1041,7 @@ header
             display: inline-block
             
     header .overlay
+        height: 100%
         position: relative
     header
         height: auto
@@ -1046,6 +1051,8 @@ header
         margin: 4em auto
         .btn
             padding-bottom: 0
+    .footer-page
+        margin-top: 0
 .b-right
     border-right: solid 2px #ccc
 
@@ -1078,3 +1085,5 @@ header
     a
         text-decoration: underline
         line-height: 2.5em
+.text-center 
+    text-align: center !important
