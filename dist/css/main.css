@@ -1270,6 +1270,7 @@ header {
 
 .lk .first {
   padding-top: 1em;
+  padding-bottom: 0;
   background: none; }
   .lk .first p {
     width: 50%;
@@ -1331,6 +1332,10 @@ header {
       color: #fff; }
     .lk .lk_info input::placeholder {
       color: #fff; }
+    .lk .lk_info input:focus {
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+      border-bottom: 3px solid #5C5C5C; }
   .lk .lk_info .col-md-6 {
     padding: 0 3em; }
   .lk .lk_info .btn {
@@ -1346,6 +1351,7 @@ header {
     display: inline-block; }
 
 .lk header .overlay {
+  height: 100%;
   position: relative; }
 
 .lk header {
@@ -1357,6 +1363,9 @@ header {
   margin: 4em auto; }
   .lk .roadmap__bottom .btn {
     padding-bottom: 0; }
+
+.lk .footer-page {
+  margin-top: 0; }
 
 .b-right {
   border-right: solid 2px #ccc; }
@@ -1389,3 +1398,6 @@ header {
 #documents-popup a {
   text-decoration: underline;
   line-height: 2.5em; }
+
+.text-center {
+  text-align: center !important; }
